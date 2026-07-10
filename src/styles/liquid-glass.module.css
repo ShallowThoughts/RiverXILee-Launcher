@@ -1,0 +1,90 @@
+.wrapper {
+  --liquid-glass-radius: 28px;
+
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  isolation: isolate;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--liquid-glass-radius);
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px) saturate(1.8) brightness(1.16);
+  -webkit-backdrop-filter: blur(12px) saturate(1.8) brightness(1.16);
+  box-shadow:
+    inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
+    inset 0 0 10px 4px rgba(255, 255, 255, 0.15),
+    0 4px 16px rgba(17, 17, 26, 0.05),
+    0 8px 24px rgba(17, 17, 26, 0.05),
+    0 16px 56px rgba(17, 17, 26, 0.05),
+    inset 0 4px 16px rgba(17, 17, 26, 0.05),
+    inset 0 8px 24px rgba(17, 17, 26, 0.05),
+    inset 0 16px 56px rgba(17, 17, 26, 0.05);
+}
+
+.wrapper[data-liquid-level="front"] {
+  --liquid-glass-radius: 22px;
+}
+
+.effect {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+
+  border-radius: inherit;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 38%),
+    rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px) saturate(1.8) brightness(1.16);
+  -webkit-backdrop-filter: blur(12px) saturate(1.8) brightness(1.16);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.effect::before {
+  content: "";
+  position: absolute;
+  inset: -16%;
+
+  backdrop-filter: url(#glass-distortion) saturate(1);
+  -webkit-backdrop-filter: url(#glass-distortion) saturate(1);
+  opacity: 0.72;
+}
+
+.effect::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg, rgba(76, 201, 240, 0.1), transparent 30%),
+    linear-gradient(270deg, rgba(255, 80, 150, 0.09), transparent 34%);
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+
+.shine {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+
+  box-shadow:
+    inset 1px 1px 2px 0 rgba(255, 255, 255, 0.4),
+    inset -1px -1px 2px 1px rgba(255, 255, 255, 0.18);
+}
+
+:global([data-theme="dark"]) .wrapper {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.32);
+}
+
+:global([data-theme="dark"]) .shine {
+  box-shadow:
+    inset 1px 1px 2px 0 rgba(255, 255, 255, 0.24),
+    inset -1px -1px 2px 1px rgba(255, 255, 255, 0.1);
+}
