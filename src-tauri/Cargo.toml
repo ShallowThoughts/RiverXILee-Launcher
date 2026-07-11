@@ -1,7 +1,7 @@
 [package]
-name = "sjmcl-liquid-glass"
+name = "riverxilee-launcher"
 version.workspace = true
-description = "A Liquid Glass derivative edition of SJMCL"
+description = "RiverXILee Launcher, a Liquid Glass derivative edition of SJMCL"
 authors = ["SJMCL Team"]
 license = "GNU General Public License v3.0 (with additional terms)"
 repository = "https://github.com/UNIkeEN/SJMCL"

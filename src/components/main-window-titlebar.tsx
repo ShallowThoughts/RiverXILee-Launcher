@@ -212,7 +212,7 @@ const MainWindowTitlebar = () => {
         {(isWindows || isLinux) && (
           <Image
             src="/images/icons/Logo_32x32.png"
-            alt="SJMCL"
+            alt="RiverXILee Launcher"
             boxSize="16px"
           />
         )}

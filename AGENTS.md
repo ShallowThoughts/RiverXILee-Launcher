@@ -1,4 +1,4 @@
-# SJMC Launcher 项目开发指南
+# RiverXILee Launcher 项目开发指南
 
 > 本文件为 AI 编程助手提供项目上下文和开发规范。
 

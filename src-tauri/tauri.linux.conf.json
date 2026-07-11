@@ -1,10 +1,10 @@
 {
-  "identifier": "SJMCLLiquidGlass",
+  "identifier": "RiverXILeeLauncher",
   "app": {
     "windows": [
       {
         "label": "main",
-        "title": "SJMCL Liquid Glass",
+        "title": "RiverXILee Launcher",
         "url": "/",
         "width": 800,
         "height": 550,

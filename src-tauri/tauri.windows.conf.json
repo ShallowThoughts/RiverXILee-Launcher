@@ -1,5 +1,5 @@
 {
-  "identifier": "SJMCLLiquidGlass",
+  "identifier": "RiverXILeeLauncher",
   "bundle": {
     "windows": {
       "nsis": {
@@ -21,7 +21,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "SJMCL Liquid Glass",
+        "title": "RiverXILee Launcher",
         "url": "/",
         "width": 820,
         "height": 550,

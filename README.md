@@ -1,16 +1,10 @@
-<img src="docs/figs/banner.png" alt="SJMCL" />
-
-[![Test Build](https://img.shields.io/github/actions/workflow/status/UNIkeEN/SJMCL/test.yml?label=test%20build&logo=github&style=for-the-badge)](https://github.com/UNIkeEN/SJMCL/blob/main/.github/workflows/test.yml)
-![Downloads](https://img.shields.io/github/downloads/UNIkeEN/SJMCL/total?logo=github&style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/UNIkeEN/SJMCL?style=for-the-badge)
-![Runs](https://img.shields.io/badge/dynamic/json?color=blue&style=for-the-badge&label=runs&query=$.total_count_str&url=https%3A%2F%2Fmc.sjtu.cn%2Fapi-sjmcl%2Fcount)
-[![Deepwiki](https://img.shields.io/badge/Ask-DeepWiki-20B2AA?logo=&style=for-the-badge)](https://deepwiki.com/UNIkeEN/SJMCL)
+# RiverXILee Launcher
 
 **English** · [简体中文](docs/README.zh-Hans.md) · [繁體中文](docs/README.zh-Hant.md)
 
 ## Derivative Notice
 
-This repository is a fan-made derivative edition named **SJMCL Liquid Glass Edition**. It is based on the original [UNIkeEN/SJMCL](https://github.com/UNIkeEN/SJMCL) project by the SJMCL Team.
+This repository is a fan-made derivative edition named **RiverXILee Launcher**. It is based on the original [UNIkeEN/SJMCL](https://github.com/UNIkeEN/SJMCL) project by the SJMCL Team.
 
 The original authors and upstream project are not affiliated with this derivative edition unless stated otherwise. Please keep the upstream copyright notice, GPLv3 license, and `LICENSE.EXTRA` terms when redistributing modified builds.
 
@@ -33,11 +27,11 @@ The original authors and upstream project are not affiliated with this derivativ
 
 ## Getting Started
 
-Getting started with SJMCL is simple, just download the latest release from the [Official Website](https://mc.sjtu.cn/sjmcl/en/downloads).
+Getting started with RiverXILee Launcher is simple: download a build from this repository's Releases page after one is published.
 
-You can also find all the releases, including the nightly versions, on [GitHub Releases](https://github.com/UNIkeEN/SJMCL/releases).
+For the original upstream SJMCL releases, visit [UNIkeEN/SJMCL Releases](https://github.com/UNIkeEN/SJMCL/releases).
 
-SJMCL currently supports the following platforms:
+RiverXILee Launcher currently supports the following platforms inherited from SJMCL:
 
 | Platform  | Versions            | Architectures              | Provided Bundles                        |
 |-----------|---------------------|----------------------------|-----------------------------------------|
@@ -45,7 +39,7 @@ SJMCL currently supports the following platforms:
 | macOS     | 10.15 and above     | `aarch64`, `x86_64`        | `.app`, `.dmg`                          |
 | Linux     | webkit2gtk 4.1 (e.g., Ubuntu 22.04) | `aarch64`, `x86_64`   | `.deb`, `.rpm`, portable binary |
 
-To learn about how to use SJMCL’s features and browse frequently asked questions, please refer to the [User Documentation](https://mc.sjtu.cn/sjmcl/en/docs).
+To learn about the upstream SJMCL feature set and browse frequently asked questions, please refer to the [SJMCL User Documentation](https://mc.sjtu.cn/sjmcl/en/docs).
 
 <details>
 <summary><h3>Install from Command Line</h3></summary>
@@ -121,10 +115,9 @@ For more installation options and platform notes, see the [User Documentation](h
 
 ## Development and Contributing
 
-To get started, clone the repository and install the required dependencies:
+To get started, clone this repository and install the required dependencies:
 
 ```bash
-git clone git@github.com:UNIkeEN/SJMCL.git
 pnpm install
 ```
 

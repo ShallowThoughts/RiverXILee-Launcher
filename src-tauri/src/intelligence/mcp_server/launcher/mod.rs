@@ -37,7 +37,7 @@ impl ServerHandler for McpContext {
           .with_description("MCP tools exposed by SJMCL, a modern Minecraft launcher"),
       )
       .with_instructions(
-        "Use tools to query Minecraft instances and accounts managed by SJMC Launcher. When a tool requires instance_id, first list available instances and then pass one returned id. This server is intended for local trusted clients."
+        "Use tools to query Minecraft instances and accounts managed by RiverXILee Launcher. When a tool requires instance_id, first list available instances and then pass one returned id. This server is intended for local trusted clients."
       )
   }
 }

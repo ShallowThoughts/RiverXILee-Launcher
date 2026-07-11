@@ -1,5 +1,5 @@
 {
-  "identifier": "SJMCLLiquidGlass",
+  "identifier": "RiverXILeeLauncher",
   "bundle": {
     "resources": {
       "infoplist": ""
@@ -19,7 +19,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "SJMCL Liquid Glass",
+        "title": "RiverXILee Launcher",
         "url": "/",
         "width": 800,
         "height": 550,

@@ -17,7 +17,11 @@
           "title": "開發諸君之列"
         },
         "sourceCode": {
-          "title": "覽源碼於群碼之匯"
+          "title": "原 SJMCL 之倉"
+        },
+        "derivativeNotice": {
+          "title": "二創之明",
+          "description": "RiverXILee Launcher 基於 SJMCL 改作。原倉：https://github.com/UNIkeEN/SJMCL"
         },
         "aboutSJMC": {
           "title": "有涉上海交通大學礦藝社（SJMC）"
@@ -176,7 +180,7 @@
         "title": "進階之選",
         "uuid": {
           "label": "戶碼",
-          "placeholder": "（由 SJMCL 自調生成）",
+          "placeholder": "（由 RiverXILee Launcher 自調生成）",
           "errorMessage": "UUID 格式不正確"
         }
       }
@@ -205,7 +209,7 @@
       "description": {
         "start": {
           "3rdparty": "此鑒權之源援 Yggdrasil Connect 規範提案",
-          "microsoft": "SJMCL 援微軟 OAuth 2.0 裝置授權流"
+          "microsoft": "RiverXILee Launcher 援微軟 OAuth 2.0 裝置授權流"
         },
         "next": "請擊續登入之鈕以轉登入頁，書上碼（已自鈔）。"
       },
@@ -529,7 +533,7 @@
       "type": "型別"
     },
     "warning": {
-      "mojang": "Mojang 所布之爪哇行時，將由 SJMCL 置於特定夾。",
+      "mojang": "Mojang 所布之爪哇行時，將由 RiverXILee Launcher 置於特定夾。",
       "oracle": "自 Oracle 源引之，或須登入。"
     }
   },
@@ -840,10 +844,10 @@
     "title": "{{name}} 置設"
   },
   "ExtensionSettingsPage": {
-    "alert": "SJMCL 不能制第三方擴充之行，亦不能保其私據之處置。惟可信源之擴充，可置而啟之。",
+    "alert": "RiverXILee Launcher 不能制第三方擴充之行，亦不能保其私據之處置。惟可信源之擴充，可置而啟之。",
     "fileDnD": {
-      "title": "置 SJMCL 擴充套件",
-      "desc": "將擴充套件案 {{fileName}} 置於 SJMCL"
+      "title": "置 RiverXILee Launcher 擴充套件",
+      "desc": "將擴充套件案 {{fileName}} 置於 RiverXILee Launcher"
     },
     "installed": "已裝擴充套件",
     "menu": {
@@ -1271,14 +1275,14 @@
         "directories": {
           "special": {
             "CURRENT_DIR": "今案夾",
-            "APP_DATA_SUBDIR": "SJMCL 資料案夾",
+            "APP_DATA_SUBDIR": "RiverXILee Launcher 資料案夾",
             "OFFICIAL_DIR": "官方啟者案夾"
           }
         }
       },
       "deleteDialog": {
         "title": "刪戲案夾",
-        "content": "誠欲刪戲案夾 {{dirName}} 乎？（SJMCL 將不會掃描此夾，但不會刪硬碟上的案）"
+        "content": "誠欲刪戲案夾 {{dirName}} 乎？（RiverXILee Launcher 將不會掃描此夾，但不會刪硬碟上的案）"
       },
       "directoryNotExist": "該夾無，請刪並復增"
     },
@@ -1436,7 +1440,7 @@
     "top": {
       "settings": {
         "LauncherDocs": {
-          "title": "SJMC Launcher 案文",
+          "title": "RiverXILee Launcher 案文",
           "url": "https://mc.sjtu.cn/sjmcl/docs"
         },
         "UserGroup": {
@@ -1667,7 +1671,7 @@
     }
   },
   "IntelligenceSettingsPage": {
-    "title": "SJMCL 智慧",
+    "title": "RiverXILee Launcher 智慧",
     "description": "將人工智慧形整合進您的啟者使用與 礦藝 遊玩體驗",
     "mcpServer": {
       "title": "MCP 服務",
@@ -1709,7 +1713,7 @@
     },
     "confirmDelete": {
       "title": "卸此爪哇",
-      "description": "誠欲移除此版爪哇乎？（SJMCL 將不能用此爪哇啟戲，然不刪硬碟上之案。）"
+      "description": "誠欲移除此版爪哇乎？（RiverXILee Launcher 將不能用此爪哇啟戲，然不刪硬碟上之案。）"
     }
   },
   "LanguageMenu": {
@@ -1726,7 +1730,7 @@
   "LastExitedAbnormallyDialog": {
     "dialog": {
       "title": "上次行異常退出",
-      "content": "SJMCL 上次行時異常退出。您可將誌傳送到<community>使用者社群</community>，或在 <github>群碼之匯</github> 發起 Issue 以尋求助",
+      "content": "RiverXILee Launcher 上次行時異常退出。您可將誌傳送到<community>使用者社群</community>，或在 <github>群碼之匯</github> 發起 Issue 以尋求助",
       "viewLog": "察誌"
     }
   },
@@ -1773,7 +1777,7 @@
   "MainLayout": {
     "fileDnD": {
       "title": "導入改囊集",
-      "desc": "將改囊集案 {{fileName}} 導入 SJMCL"
+      "desc": "將改囊集案 {{fileName}} 導入 RiverXILee Launcher"
     }
   },
   "MainWindowTitlebar": {
@@ -1883,7 +1887,7 @@
       "neoforge": "新鍛",
       "authlibInjector": "Authlib Injector",
       "github": "群碼之匯",
-      "sjmclapi": "SJMC Launcher API"
+      "sjmclapi": "RiverXILee Launcher API"
     }
   },
   "PlayerMenu": {
@@ -2223,8 +2227,8 @@
   },
   "RestartForUpdateConfirmDialog": {
     "title": "啟者迭更",
-    "body": "新版已畢引，復啟 SJMCL 以畢迭更",
-    "bodyWinInstaller": "新版已畢引，點選置將關閉 SJMCL 並行置程式",
+    "body": "新版已畢引，復啟 RiverXILee Launcher 以畢迭更",
+    "bodyWinInstaller": "新版已畢引，點選置將關閉 RiverXILee Launcher 並行置程式",
     "button": {
       "restart": "復啟",
       "install": "置",
@@ -3148,9 +3152,9 @@
   },
   "StarUsModal": {
     "header": {
-      "title": "於群碼之匯爲我輩點星"
+      "title": "於群碼之匯星原 SJMCL"
     },
-    "body": "若您喜愛 SJMCL，並希望支援我輩，可於群碼之匯爲我輩點一星乎？此小舉義甚重，足以勉我輩持續爲君增益其用。",
+    "body": "RiverXILee Launcher 基於 SJMCL 改作。若欲助上游之項，可於群碼之匯爲原倉點星。",
     "button": {
       "later": "稍後",
       "starUs": "點亮星標"
@@ -3184,7 +3188,7 @@
   "UnavailableExePathAlertDialog": {
     "dialog": {
       "title": "無效的行徑",
-      "content": "您方臨時或非法夾下行 SJMCL，您的置設和戲資料或丟失。請將 SJMCL 徙到他者所後再次行。",
+      "content": "您方臨時或非法夾下行 RiverXILee Launcher，您的置設和戲資料或丟失。請將 RiverXILee Launcher 徙到他者所後再次行。",
       "btnContinue": "仍要行"
     }
   },
@@ -3221,11 +3225,11 @@
       "title": "歡迎！"
     },
     "body": {
-      "text": "歡迎使用 SJMCL！在始使用之前，請務必閱讀並許我們的<terms>客契</terms>。"
+      "text": "歡迎使用 RiverXILee Launcher！在始使用之前，請務必閱讀並許我們的<terms>客契</terms>。"
     },
     "warning": {
-      "unstableVersion": "您方使用{{versionLabel}}的 SJMCL，部分功用或不穩定或未開發畢，歡迎報告使用問題與功用薦。",
-      "winArm64Notice": "SJMCL 現已支援 Windows on Arm 平臺。<br/>如您方使用 <b>高通</b> 平臺，您或須置 <glpack>OpenGL 相容包</glpack> 後才能進行戲。"
+      "unstableVersion": "您方使用{{versionLabel}}的 RiverXILee Launcher，部分功用或不穩定或未開發畢，歡迎報告使用問題與功用薦。",
+      "winArm64Notice": "RiverXILee Launcher 現已支援 Windows on Arm 平臺。<br/>如您方使用 <b>高通</b> 平臺，您或須置 <glpack>OpenGL 相容包</glpack> 後才能進行戲。"
     },
     "button": {
       "agree": "許並續"

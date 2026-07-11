@@ -43,6 +43,7 @@ const AboutSettingsPage = () => {
     sinter: "https://www.ui.cn/detail/615564",
     scl: "https://suhang12332.github.io/Swift-Craft-Launcher-Assets/web/",
   };
+  const upstreamRepositoryUrl = "https://github.com/UNIkeEN/SJMCL";
 
   const checkUpdate = useCallback(async () => {
     setCheckingUpdate(true);
@@ -140,14 +141,33 @@ const AboutSettingsPage = () => {
           title: t("AboutSettingsPage.about.settings.sourceCode.title"),
           children: (
             <CommonIconButton
-              label="https://github.com/UNIkeEN/SJMCL"
+              label={upstreamRepositoryUrl}
               icon="external"
               withTooltip
               tooltipPlacement="bottom-end"
               size="xs"
               h={18}
               onClick={() => {
-                openUrl("https://github.com/UNIkeEN/SJMCL");
+                openUrl(upstreamRepositoryUrl);
+              }}
+            />
+          ),
+        },
+        {
+          title: t("AboutSettingsPage.about.settings.derivativeNotice.title"),
+          description: t(
+            "AboutSettingsPage.about.settings.derivativeNotice.description"
+          ),
+          children: (
+            <CommonIconButton
+              label={upstreamRepositoryUrl}
+              icon="external"
+              withTooltip
+              tooltipPlacement="bottom-end"
+              size="xs"
+              h={18}
+              onClick={() => {
+                openUrl(upstreamRepositoryUrl);
               }}
             />
           ),

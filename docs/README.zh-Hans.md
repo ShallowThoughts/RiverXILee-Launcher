@@ -1,16 +1,10 @@
-<img src="figs/banner.png" alt="SJMCL" />
-
-[![Test Build](https://img.shields.io/github/actions/workflow/status/UNIkeEN/SJMCL/test.yml?label=test%20build&logo=github&style=for-the-badge)](https://github.com/UNIkeEN/SJMCL/blob/main/.github/workflows/test.yml)
-![Downloads](https://img.shields.io/github/downloads/UNIkeEN/SJMCL/total?logo=github&style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/UNIkeEN/SJMCL?style=for-the-badge)
-![Runs](https://img.shields.io/badge/dynamic/json?color=blue&style=for-the-badge&label=runs&query=$.total_count_str&url=https%3A%2F%2Fmc.sjtu.cn%2Fapi-sjmcl%2Fcount)
-[![Deepwiki](https://img.shields.io/badge/Ask-DeepWiki-20B2AA?logo=&style=for-the-badge)](https://deepwiki.com/UNIkeEN/SJMCL)
+# RiverXILee Launcher
 
 [English](../README.md) · **简体中文** · [繁體中文](README.zh-Hant.md)
 
 ## 二创说明
 
-本仓库是名为 **SJMCL Liquid Glass Edition** 的二创修改版，基于 SJMCL 团队开发的原项目 [UNIkeEN/SJMCL](https://github.com/UNIkeEN/SJMCL)。
+本仓库是名为 **RiverXILee Launcher** 的二创修改版，基于 SJMCL 团队开发的原项目 [UNIkeEN/SJMCL](https://github.com/UNIkeEN/SJMCL)。
 
 除非另有说明，原作者与上游项目并不隶属于本二创版本。分发修改版时请保留上游版权声明、GPLv3 许可证以及 `LICENSE.EXTRA` 附加条款。
 
@@ -33,11 +27,11 @@
 
 ## 开始使用
 
-开始使用 SJMCL，只需前往 [官网](https://mc.sjtu.cn/sjmcl/downloads) 下载最新版即可。
+开始使用 RiverXILee Launcher：请在本仓库发布 Release 后，从本仓库 Releases 页面下载构建产物。
 
-您也可以在 [GitHub Releases](https://github.com/UNIkeEN/SJMCL/releases) 获取所有版本，包括周期性构建。
+如需原版 SJMCL 的发布版本，请前往 [UNIkeEN/SJMCL Releases](https://github.com/UNIkeEN/SJMCL/releases)。
 
-SJMCL 目前支持以下平台：
+RiverXILee Launcher 继承 SJMCL 的平台支持：
 
 | 平台    | 系统版本            | 架构               | 提供的分发类型                              |
 |---------|---------------------|--------------------|--------------------------------------------|
@@ -45,7 +39,7 @@ SJMCL 目前支持以下平台：
 | macOS   | 10.15 及以上        | `aarch64`, `x86_64` | `.app`，`.dmg`                   |
 | Linux   | webkit2gtk 4.1 (如 Ubuntu 22.04) | `aarch64`, `x86_64` | `.deb`, `.rpm`, 便携版二进制文件 |
 
-了解更多功能与常见问题，请参阅 [用户文档](https://mc.sjtu.cn/sjmcl/docs)。
+了解上游 SJMCL 的功能与常见问题，请参阅 [SJMCL 用户文档](https://mc.sjtu.cn/sjmcl/docs)。
 
 <details>
 <summary><h3>从命令行安装</h3></summary>
@@ -121,10 +115,9 @@ winget install SJMC.SJMCL
 
 ## 开发与贡献
 
-首先克隆本项目并安装前端依赖：
+首先克隆本仓库并安装前端依赖：
 
 ```bash
-git clone git@github.com:UNIkeEN/SJMCL.git
 pnpm install
 ```
 
