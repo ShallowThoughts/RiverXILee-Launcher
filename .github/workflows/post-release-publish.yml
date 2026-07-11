@@ -19,6 +19,7 @@ concurrency:
 
 jobs:
   Prepare-Release-Assets:
+    if: github.repository == 'UNIkeEN/SJMCL'
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.prepare.outputs.version }}
