@@ -8,7 +8,7 @@ on:
         required: true
         type: string
       release_tag:
-        description: "Release tag to read assets from. Defaults to v<version>."
+        description: "Release tag to read assets from. Defaults to RXL-<version>."
         required: false
         type: string
   workflow_call:
@@ -46,7 +46,7 @@ jobs:
         env:
           GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ inputs.release_tag || format('v{0}', inputs.version) }}
+          RELEASE_TAG: ${{ inputs.release_tag || format('RXL-{0}', inputs.version) }}
           VERSION: ${{ inputs.version }}
         run: |
           get_asset_digest() {
@@ -55,16 +55,16 @@ jobs:
               --jq ".assets[] | select(.name == \"${asset_name}\") | .digest"
           }
 
-          ARM_DMG_DIGEST=$(get_asset_digest "SJMCL_${VERSION}_macos_aarch64.dmg")
-          INTEL_DMG_DIGEST=$(get_asset_digest "SJMCL_${VERSION}_macos_x86_64.dmg")
+          ARM_DMG_DIGEST=$(get_asset_digest "RXL_${VERSION}_macos_aarch64.dmg")
+          INTEL_DMG_DIGEST=$(get_asset_digest "RXL_${VERSION}_macos_x86_64.dmg")
 
           if [[ -z "$ARM_DMG_DIGEST" ]]; then
-            echo "Missing release asset digest: SJMCL_${VERSION}_macos_aarch64.dmg"
+            echo "Missing release asset digest: RXL_${VERSION}_macos_aarch64.dmg"
             exit 1
           fi
 
           if [[ -z "$INTEL_DMG_DIGEST" ]]; then
-            echo "Missing release asset digest: SJMCL_${VERSION}_macos_x86_64.dmg"
+            echo "Missing release asset digest: RXL_${VERSION}_macos_x86_64.dmg"
             exit 1
           fi
 

@@ -8,7 +8,7 @@ on:
         required: true
         type: string
       release_tag:
-        description: "Release tag to download assets from. Defaults to v<version>."
+        description: "Release tag to download assets from. Defaults to RXL-<version>."
         required: false
         type: string
       arch:
@@ -60,19 +60,27 @@ jobs:
         env:
           GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_TAG: ${{ inputs.release_tag || format('v{0}', inputs.version) }}
+          RELEASE_TAG: ${{ inputs.release_tag || format('RXL-{0}', inputs.version) }}
         run: |
           mkdir -p artifacts
           gh release download "$RELEASE_TAG" \
             --repo "$GH_REPO" \
-            --pattern "SJMCL_${{ inputs.version }}_linux_${{ inputs.arch }}.deb" \
+            --pattern "RXL_${{ inputs.version }}_linux_${{ inputs.arch }}.deb" \
             --dir artifacts
 
       - name: Prepare Snap payload
         run: |
           mkdir -p snap-payload
           dpkg -x artifacts/*.deb snap-payload/
-          chmod +x snap-payload/usr/bin/SJMCL
+          chmod +x snap-payload/usr/bin/riverxilee-launcher
+          desktop_file=$(find snap-payload/usr/share/applications -maxdepth 1 -type f -name "*.desktop" | head -n 1)
+          target_desktop="snap-payload/usr/share/applications/riverxilee-launcher.desktop"
+          if [ -n "$desktop_file" ]; then
+            if [ "$desktop_file" != "$target_desktop" ]; then
+              mv "$desktop_file" "$target_desktop"
+            fi
+            sed -i "s|^Exec=.*|Exec=riverxilee-launcher|" "$target_desktop"
+          fi
 
       - name: Update Snapcraft version
         run: |

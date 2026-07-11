@@ -11,12 +11,12 @@ cask "sjmcl" do
     sha256 "__INTEL_SHA256__"
   end
 
-  url "https://github.com/UNIkeEN/SJMCL/releases/download/v#{version}/SJMCL_#{version}_macos_#{arch}.dmg",
-      verified: "github.com/UNIkeEN/SJMCL/"
+  url "https://github.com/ShallowThoughts/RiverXILee-Launcher/releases/download/RXL-#{version}/RXL_#{version}_macos_#{arch}.dmg",
+      verified: "github.com/ShallowThoughts/RiverXILee-Launcher/"
 
-  name "SJMCL"
-  desc "A Minecraft launcher born from @SJMC-Dev, built with the community"
-  homepage "https://github.com/UNIkeEN/SJMCL"
+  name "RiverXILee Launcher"
+  desc "A Liquid Glass derivative edition of SJMCL"
+  homepage "https://github.com/ShallowThoughts/RiverXILee-Launcher"
 
-  app "SJMCL.app"
+  app "RiverXILee Launcher.app"
 end

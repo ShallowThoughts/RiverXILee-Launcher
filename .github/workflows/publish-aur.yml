@@ -11,7 +11,7 @@ on:
         required: true
         type: string
       release_tag:
-        description: "Release tag to download assets from. Defaults to v<version>."
+        description: "Release tag to download assets from. Defaults to RXL-<version>."
         required: false
         type: string
   workflow_call:
@@ -44,7 +44,7 @@ jobs:
         env:
           GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_TAG: ${{ inputs.release_tag || format('v{0}', inputs.version) }}
+          RELEASE_TAG: ${{ inputs.release_tag || format('RXL-{0}', inputs.version) }}
         run: |
           get_asset_digest() {
             local asset_name="$1"
@@ -52,8 +52,8 @@ jobs:
               --jq ".assets[] | select(.name == \"${asset_name}\") | .digest"
           }
 
-          X86_64_DEB_DIGEST=$(get_asset_digest "SJMCL_${{ inputs.version }}_linux_x86_64.deb")
-          AARCH64_DEB_DIGEST=$(get_asset_digest "SJMCL_${{ inputs.version }}_linux_aarch64.deb")
+          X86_64_DEB_DIGEST=$(get_asset_digest "RXL_${{ inputs.version }}_linux_x86_64.deb")
+          AARCH64_DEB_DIGEST=$(get_asset_digest "RXL_${{ inputs.version }}_linux_aarch64.deb")
 
           if [[ -z "$X86_64_DEB_DIGEST" || -z "$AARCH64_DEB_DIGEST" ]]; then
             echo "Failed to read one or more release asset digests from GitHub."

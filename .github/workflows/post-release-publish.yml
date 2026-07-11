@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       release_tag:
-        description: "Release tag to publish from, for example v1.2.3"
+        description: "Release tag to publish from, for example RXL-1.2.3"
         required: true
   release:
     types:
@@ -35,14 +35,15 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           VERSION="${RELEASE_TAG#v}"
+          VERSION="${VERSION#RXL-}"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "release_tag=$RELEASE_TAG" >> "$GITHUB_OUTPUT"
           IS_PRERELEASE=$(gh release view "$RELEASE_TAG" --repo "$GH_REPO" --json isPrerelease --jq '.isPrerelease')
           echo "is_prerelease=$IS_PRERELEASE" >> "$GITHUB_OUTPUT"
 
           assets=(
-            "SJMCL_${VERSION}_linux_x86_64.deb"
-            "SJMCL_${VERSION}_linux_aarch64.deb"
+            "RXL_${VERSION}_linux_x86_64.deb"
+            "RXL_${VERSION}_linux_aarch64.deb"
           )
 
           echo "Checking release assets for ${RELEASE_TAG}"

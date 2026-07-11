@@ -1,17 +1,17 @@
-name: sjmcl
+name: riverxilee-launcher
 base: core22
 version: '0.0.0'
-summary: SJMCL Minecraft Launcher
+summary: RiverXILee Launcher
 description: |
-  SJMC Minecraft Launcher. A modern, lightweight Minecraft launcher.
+  RiverXILee Launcher, a Liquid Glass derivative edition of SJMCL.
 
 grade: stable
 confinement: strict
 
 apps:
-  sjmcl:
-    command: usr/bin/SJMCL
-    desktop: usr/share/applications/SJMCL.desktop
+  riverxilee-launcher:
+    command: usr/bin/riverxilee-launcher
+    desktop: usr/share/applications/riverxilee-launcher.desktop
     extensions: [gnome]
     environment:
       GTK_USE_PORTAL: "1"
@@ -29,7 +29,7 @@ apps:
       - home
 
 parts:
-  sjmcl-payload:
+  riverxilee-launcher-payload:
     plugin: dump
     source: snap-payload
     stage-packages:
@@ -39,7 +39,7 @@ parts:
 
   cleanup:
     after:
-      - sjmcl-payload
+      - riverxilee-launcher-payload
     plugin: nil
     build-snaps:
       - core22

@@ -8,7 +8,7 @@ on:
         required: true
         type: string
       release_tag:
-        description: "Release tag to read assets from. Defaults to v<version>."
+        description: "Release tag to read assets from. Defaults to RXL-<version>."
         required: false
         type: string
   workflow_call:
@@ -43,7 +43,7 @@ jobs:
         env:
           GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ inputs.release_tag || format('v{0}', inputs.version) }}
+          RELEASE_TAG: ${{ inputs.release_tag || format('RXL-{0}', inputs.version) }}
           VERSION: ${{ inputs.version }}
         run: |
           get_asset_digest() {
@@ -52,9 +52,9 @@ jobs:
               --jq ".assets[] | select(.name == \"${asset_name}\") | .digest"
           }
 
-          X64_ASSET="SJMCL_${VERSION}_windows_x86_64_setup.exe"
-          X86_ASSET="SJMCL_${VERSION}_windows_i686_setup.exe"
-          ARM64_ASSET="SJMCL_${VERSION}_windows_aarch64_setup.exe"
+          X64_ASSET="RXL_${VERSION}_windows_x86_64_setup.exe"
+          X86_ASSET="RXL_${VERSION}_windows_i686_setup.exe"
+          ARM64_ASSET="RXL_${VERSION}_windows_aarch64_setup.exe"
 
           X64_DIGEST=$(get_asset_digest "$X64_ASSET")
           X86_DIGEST=$(get_asset_digest "$X86_ASSET")
@@ -91,7 +91,7 @@ jobs:
         shell: bash
         env:
           VERSION: ${{ inputs.version }}
-          RELEASE_TAG: ${{ inputs.release_tag || format('v{0}', inputs.version) }}
+          RELEASE_TAG: ${{ inputs.release_tag || format('RXL-{0}', inputs.version) }}
         run: |
           OUTPUT_DIR="winget-manifests/manifests/s/SJMC/SJMCL/${VERSION}"
           mkdir -p "$OUTPUT_DIR"
