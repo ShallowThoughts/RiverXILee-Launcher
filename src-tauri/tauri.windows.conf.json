@@ -4,6 +4,9 @@
     "windows": {
       "nsis": {
         "installerIcon": "assets/icons/icon.ico",
+        "uninstallerIcon": "assets/icons/icon.ico",
+        "headerImage": "assets/misc/nsis_header_riverxilee.bmp",
+        "uninstallerHeaderImage": "assets/misc/nsis_header_riverxilee.bmp",
         "languages": [
           "English",
           "Spanish",
@@ -12,7 +15,7 @@
           "SimpChinese",
           "TradChinese"
         ],
-        "sidebarImage": "assets/misc/nsis_sidebar.bmp"
+        "sidebarImage": "assets/misc/nsis_sidebar_riverxilee.bmp"
       }
     }
   },
